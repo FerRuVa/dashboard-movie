@@ -1,4 +1,4 @@
-import { Genres } from './../src/models/genres';
+import { Genres } from '../models/genres';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
 

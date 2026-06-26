@@ -23,8 +23,8 @@ export default function Sidebar() {
         {/* MENU */}
         <nav className="space-y-2">
           <SidebarItem icon={LayoutDashboard} label="Inicio" href="/dashboard" active />
-          <SidebarItem icon={List} label="Películas" href="/dashboard/movies" />
-          <SidebarItem icon={User2} label="Usuarios" href="/dashboard/users" />
+          <SidebarItem icon={List} label="Películas" href="/movies" />
+          <SidebarItem icon={User2} label="Usuarios" href="/users" />
         </nav>
 
         {/* SETTINGS */}

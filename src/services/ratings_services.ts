@@ -1,4 +1,4 @@
-import { Ratings } from './../src/models/ratings';
+import { Ratings } from '../models/ratings';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
 

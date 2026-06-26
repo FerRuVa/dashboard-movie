@@ -3,9 +3,9 @@ export interface Movies{
   title: string;
   description: string;
   duration: string;
-  posterUrl: string;
-  createdAt: Date;
-  releaseYear: number;
-  countryId: number;
-  videoUrl: string;
+  poster_url: string;
+  created_at: Date;
+  release_year: number;
+  country_id: number;
+  video_url: string;
 }
