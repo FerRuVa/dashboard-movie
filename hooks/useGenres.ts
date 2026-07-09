@@ -6,8 +6,8 @@ import { getGenres } from "@/service/genres/genres_services";
 
 export function useGenres(autoLoad = true) {
     const [genres, setGenres] = useState<Genres[]>([]);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState("");
+    const [loadingg, setLoading] = useState(false);
+    const [errorg, setError] = useState("");
 
     const normalizeGenres = (genre: any): Genres => ({
         id: genre.id,
@@ -20,8 +20,6 @@ export function useGenres(autoLoad = true) {
             setError("");
 
             const data = await getGenres();
-
-            console.log("Modal genres:", data);
 
             setGenres(data.map(normalizeGenres));
 
@@ -41,7 +39,7 @@ export function useGenres(autoLoad = true) {
 
     return {
         genres,
-        loading,
-        error,
+        loadingg,
+        errorg,
     };
 }

@@ -10,7 +10,5 @@ export const getGenres = async (): Promise<Genres[]> => {
 
   const data = await res.json();
 
-  console.log("JSON recibido:", data);
-
   return data;
 };

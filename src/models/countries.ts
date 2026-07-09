@@ -1,4 +1,4 @@
-export interface Contries{
+export interface Countries{
     id: number;
     country: string;
 }

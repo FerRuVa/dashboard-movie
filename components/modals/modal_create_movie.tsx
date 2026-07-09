@@ -3,7 +3,9 @@
 import { useState } from "react";
 import { X } from "lucide-react";
 import { useGenres } from "@/hooks/useGenres";
+import { useCountries } from "@/hooks/useCountries";
 import { Genres } from "@/src/models/genres";
+import { Countries } from "@/src/models/countries";
 
 import GenericComboboxProps from "../ui/comboboxprops";
 
@@ -17,13 +19,15 @@ export default function ModalCreateMovie({
   onClose,
 }: MovieFormModalProps) {
 
-  const { genres, loading, error } = useGenres();
+  const { genres, loadingg, errorg } = useGenres();
+  const { countries, loadingc, errorc } = useCountries();
 
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [duration, setDuration] = useState("");
 
   const [selectedGenre, setSelectedGenre] = useState<Genres>();
+  const [selectedCountries, setSelectedCountries] = useState<Countries>();
 
   if (!isOpen) return null;
 
@@ -116,7 +120,7 @@ export default function ModalCreateMovie({
 
               <GenericComboboxProps
                 items={genres}
-                loading={loading}
+                loading={loadingg}
                 value={selectedGenre?.id}
                 getValue={(g) => g.id}
                 getLabel={(g) => g.genred}
@@ -124,12 +128,29 @@ export default function ModalCreateMovie({
               />
 
             </div>
+            <div className="w-1/2">
 
+              <GenericComboboxProps
+                items={countries}
+                loading={loadingc}
+                value={selectedCountries?.id}
+                getValue={(g) => g.id}
+                getLabel={(g) => g.country}
+                onChange={(g) => setSelectedCountries(g)}
+              />
+
+            </div>
           </div>
 
-          {error && (
+          {errorg && (
             <p className="text-red-500 text-sm">
-              {error}
+              {errorg}
+            </p>
+          )}
+
+          {errorc && (
+            <p className="text-red-500 text-sm">
+              {errorc}
             </p>
           )}
 
