@@ -29,8 +29,6 @@ export default function Header({ onSearch }: HeaderProps) {
       />
 
       <div className="flex items-center gap-4">
-        <Bell className="cursor-pointer text-gray-600" />
-        <Settings className="cursor-pointer text-gray-600" />
       </div>
     </div>
   );
